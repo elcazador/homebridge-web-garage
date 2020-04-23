@@ -78,7 +78,7 @@ GarageDoorOpener.prototype = {
       if (error) {
         this.log.warn('Error getting status: %s', error.message)
         this.service.getCharacteristic(Characteristic.CurrentDoorState).updateValue(new Error('Error getting status'))
-        this.retryStatus()
+        //this.retryStatus()
         callback(error)
       } else {
         this.log.debug('Device response: %s', responseBody)
@@ -97,18 +97,18 @@ GarageDoorOpener.prototype = {
     switch (characteristic) {
       case 'currentDoorState':
         this.service.getCharacteristic(Characteristic.CurrentDoorState).updateValue(value)
-        this.log('Updated %s to: %s', characteristic, value)
+        this.log('Update %s to: %s', characteristic, value)
         break
       case 'targetDoorState':
         this.service.getCharacteristic(Characteristic.TargetDoorState).updateValue(value)
-        this.log('Updated %s to: %s', characteristic, value)
+        this.log('Update %s to: %s', characteristic, value)
         if (parseInt(value) === 0 && this.autoLock) {
           this.autoLockFunction()
         }
         break
       case 'obstructionDetected':
         this.service.getCharacteristic(Characteristic.ObstructionDetected).updateValue(value)
-        this.log('Updated %s to: %s', characteristic, value)
+        this.log('Update %s to: %s', characteristic, value)
         if (parseInt(value) === 1 && this.autoReset) {
           this.autoResetFunction()
         }
