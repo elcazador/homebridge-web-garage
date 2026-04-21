@@ -7,7 +7,7 @@ const http = require('http')
 module.exports = function (homebridge) {
   Service = homebridge.hap.Service
   Characteristic = homebridge.hap.Characteristic
-  homebridge.registerAccessory('homebridge-web-garage', 'GarageDoorOpener', GarageDoorOpener)
+  homebridge.registerAccessory('homebridge-arduino-garage', 'GarageDoorOpener', GarageDoorOpener)
 }
 
 function GarageDoorOpener (log, config) {
