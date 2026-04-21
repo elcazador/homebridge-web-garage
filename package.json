@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tommrodrigues/homebridge-web-garage.git"
+    "url": "git+https://github.com/elcazador/homebridge-web-garage.git"
   },
   "dependencies": {
     "request": ">=2.88.0",
@@ -24,7 +24,7 @@
   "author": "Tom Rodrigues",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Tommrodrigues/homebridge-web-garage/issues"
+    "url": "https://github.com/elcazador/homebridge-web-garage/issues"
   },
-  "homepage": "https://github.com/Tommrodrigues/homebridge-web-garage#readme"
+  "homepage": "https://github.com/elcazador/homebridge-web-garage#readme"
 }
